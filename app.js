@@ -115,7 +115,7 @@ btn.addEventListener('click', () => {
 })
 
 stuBtn.addEventListener('click', () => {
-  
+  alert('Opps! Function in this button has not been set')
 })
 
 // Function of searching button
