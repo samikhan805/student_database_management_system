@@ -115,23 +115,20 @@ btn.addEventListener('click', () => {
 })
 
 stuBtn.addEventListener('click', () => {
-  alert('Opps! Function in this button has not been set')
+  alert('OPPS! Function for this button has not been set yet')
 })
 
 // Function of searching button
+var isFound = false
 searchBtn.addEventListener('click', () => {
   for (var i=0; i < stuDetails.length; i++) {
-    if (stuDetails.length < 1) {
-      alert('Opps! database is totally empty')
+    if (search.value == stuDetails[i].id) {
+      alert('ID: ' + stuDetails[i].id + '\n' + 'Name: ' + stuDetails[i].name + '\n' + 'GPA: ' + stuDetails[i].GPA + '\n' + 'Grade: ' + stuDetails[i].grade + '\n' + '\n' + 'Mathematics: ' + stuDetails[i].math + '\n' + 'Physics: ' + stuDetails[i].physics + '\n' + 'Chemistry: ' + stuDetails[i].chemistry + '\n' + 'Biology: ' + stuDetails[i].biology + '\n' + 'English: ' + stuDetails[i].english + '\n' + 'Average: ' + stuDetails[i].average)
+      isFound = true
+      break
     }
-    else if (search.value == '') {
-      alert('Please input valied ID')
-    }
-    else if (search.value == stuDetails[i].id) {
-      alert('ID: ' + stuDetails[i].id + '\n' + 'Name: ' + stuDetails[i].name + '\n' + 'GPA: ' + stuDetails[i].GPA + '\n' + 'Grade: ' + stuDetails[i].grade + '\n' + 'Mathematics: ' + stuDetails[i].math + '\n' + 'Physics: ' + stuDetails[i].physics + '\n' + 'Chemistry: ' + stuDetails[i].chemistry + '\n' + 'Biology: ' + stuDetails[i].biology + '\n' + 'English: ' + stuDetails[i].english + '\n' + 'Average: ' + stuDetails[i].average)
-    }
-    else {
-      alert('Data isn\'t stored yet')
-    }
+  }
+  if (!isFound) {
+    alert('Data not found')
   }
 })
