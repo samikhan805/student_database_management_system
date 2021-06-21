@@ -56,7 +56,7 @@ function doWork() {
   }
   
   // Vibrator
-  window.navigator.vibrate(50)
+  window.navigator.vibrate(40)
 
   // From input section, storing data
   stuDetails.push({name: nAme.value, id: Number(id.value), math: Number(math.value), physics: Number(physics.value), chemistry: Number(chemistry.value), biology: Number(biology.value), english: Number(english.value), GPA: GPA, average: avg, grade: grade})
